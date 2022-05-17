@@ -4,11 +4,17 @@ services:
     auv-rev-proxy:
         depends_on:
             - auv-wiki
+            - auv-hub
         image: auv-rev-proxy
         ports: 
-            - 80:8080
+            - 80:80
+
+    auv-hub:
+        image: auv-hub
+        ports:
+            - 3001:80
 
     auv-wiki:
         image: auv-wiki
         ports:
-            - 3000:3000
+            - 3002:3000

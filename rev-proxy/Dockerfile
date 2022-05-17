@@ -1,2 +1,7 @@
 FROM nginx
-COPY rev-proxy.conf /etc/nginx/conf.d/rev-proxy.conf
+EXPOSE 80
+
+WORKDIR /etc/nginx/conf.d
+COPY rev-proxy.conf rev-proxy.conf
+RUN rm default.conf
+
