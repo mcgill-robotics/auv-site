@@ -8,7 +8,7 @@ Bring in all the sites/services from other repositories:
 
 ### Build Docker Images
 
-Install docker - see instructions for (Ubunto 20.04)[https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04].
+Install docker - see instructions for [Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04).
 
 For each service, build from the Dockerfile in its top-level directory. Note
 the tag name is important since it is used by the docker-compose file to 
@@ -35,6 +35,7 @@ cd rev-proxy
 docker build --tag auv-rev-proxy .
 ```
 
+---
 
 You can check that the all images were built:
 
