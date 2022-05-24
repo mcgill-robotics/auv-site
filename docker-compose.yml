@@ -1,7 +1,8 @@
-version: '2'
+version: '3'
 
 services:
     auv-rev-proxy:
+        build: ./rev-proxy
         depends_on:
             - auv-wiki
             - auv-hub
@@ -10,14 +11,16 @@ services:
             - 80:80
 
     auv-hub:
+        build: ./auv-hub
         image: auv-hub
         ports:
             - 3001:80
 
     auv-wiki:
+        build: ./auv-wiki
         image: auv-wiki
         ports:
             - 3002:3000
     volumes:
-        - auv-wiki/content:/opt/raneto/example/content
+        - ./auv-wiki/content:/opt/raneto/example/content
 
